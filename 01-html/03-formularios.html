@@ -13,10 +13,28 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, corrupti?</p>
       <section>
         <h4>Registro para hackaton</h4>
-        <label>Nombre completo</label>
+        <label for="input-nombre">
+          Nombre completo
+        </label>
         <input
           type="text"
           placeholder="Ej. Juan Perez"
+          id="input-nombre"
+        >
+        <!-- br - break: salto de línea -->
+        <br>
+        <label for="input-email">email</label>
+        <input
+          type="email"
+          placeholder="ej. juan@gmail.com"
+          id="input-email"
+        >
+        <br>
+        <label for="input-pass">Contraseña</label>
+        <input
+          type="password"
+          placeholder="La contraseña debe ser mayor de 6 caractéres"
+          id="input-pass"
         >
       </section>
     </main>
