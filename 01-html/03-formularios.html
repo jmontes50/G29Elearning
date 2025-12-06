@@ -12,6 +12,7 @@
       <h2>Indicaciones</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, corrupti?</p>
       <section>
+        <!-- el intento por defecto de enviar la información de la etiqueta form es un submit -->
         <form>
         <h4>Registro para hackaton</h4>
         <label for="input-nombre">
@@ -21,6 +22,7 @@
           type="text"
           placeholder="Ej. Juan Perez"
           id="input-nombre"
+          required
         >
         <!-- br - break: salto de línea -->
         <br>
@@ -36,6 +38,9 @@
           type="password"
           placeholder="La contraseña debe ser mayor de 6 caracteres"
           id="input-pass"
+          required
+          minlength="6"
+          maxlength="12"
         >
         <br>
         <h5>Indique su género</h5>
