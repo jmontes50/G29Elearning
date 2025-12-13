@@ -38,3 +38,14 @@ ul li {
 .regalos > li {
   font-weight: bold;
 }
+
+/* + El 1er article después de un span */
+span + article {
+  background: skyblue;
+}
+
+/* aplica a todos los article que sean hermanos y esten después de un span */
+span ~ article {
+  color: green;
+  font-weight: bold;
+}
