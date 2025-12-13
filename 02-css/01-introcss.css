@@ -49,3 +49,34 @@ span ~ article {
   color: green;
   font-weight: bold;
 }
+
+/* aplica el mismo estilo a varios selectores, la coma es como un Y */
+span, article {
+  text-decoration: underline;
+}
+
+/* estilos tabla */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border:1px solid black;
+}
+
+/* pseudoclases */
+tr:nth-of-type(3) {
+  color:purple;
+}
+/* odd - impar */
+tr:nth-of-type(odd){
+  background:skyblue;
+}
+/* even - par */
+tr:nth-of-type(even){
+  background:steelblue;
+}
+/* cursor x encima */
+tr:hover {
+  background:yellow;
+}
