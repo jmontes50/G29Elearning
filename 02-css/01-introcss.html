@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- 2. style, afecta a todo el documento, NO RECOMENDABLE -->
-  <style>
-    h5 {
-      color: blue;
-      font-family: Arial;
-    }
-  </style>
-  <!-- 3. link, SI ES RECOMENDABLE -->
-  <link rel="stylesheet" href="./01-introcss.css">
-</head>
-<body>
-  <header>
-    <!-- 1. estilos inline, NO RECOMENDABLE -->
-    <h1 style="color:red; background:orange;">Tituloooo</h1>
-    <h5>Lorem ipsum dolor sit.</h5>
-  </header>
-  <section>
-    <!-- p*4{texto parrafo} -->
-    <p class="parrafo importante">
-      texto parrafo
-    </p>
-    <p class="parrafo">
-      texto parrafo
-    </p>
-    <p>texto parrafo</p>
-    <p>texto parrafo</p>
-  </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 2. style, afecta a todo el documento, NO RECOMENDABLE -->
+    <style>
+      h5 {
+        color: blue;
+        font-family: Arial;
+      }
+    </style>
+    <!-- 3. link, SI ES RECOMENDABLE -->
+    <link rel="stylesheet" href="./01-introcss.css" />
+  </head>
+  <body>
+    <header>
+      <!-- 1. estilos inline, NO RECOMENDABLE -->
+      <h1 style="color: red; background: orange">Tituloooo</h1>
+      <h5>Lorem ipsum dolor sit.</h5>
+    </header>
+    <section>
+      <!-- p*4{texto parrafo} -->
+      <p class="parrafo importante">texto parrafo</p>
+      <p class="parrafo">texto parrafo</p>
+      <p>texto parrafo</p>
+      <p id="nota">texto parrafo</p>
+    </section>
+    <section>
+      <ul class="regalos">
+        <li>Pijama</li>
+        <li>Gran Turismo 7</li>
+        <li>Cockpit de F1</li>
+        <ul>
+          <li>Laptop Gamer</li>
+          <li>Una Play</li>
+        </ul>
+      </ul>
+    </section>
+  </body>
 </html>

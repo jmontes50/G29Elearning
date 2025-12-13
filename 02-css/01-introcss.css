@@ -19,3 +19,22 @@ h1 {
 .importante {
   color: yellow;
 }
+
+/* selector de id */
+#nota {
+  color: steelblue;
+}
+
+/* operadores */
+/* van a tener en cuenta la estructura HTML */
+
+/* el espacio entre ul y li referencia: Todos los li que esten dentro de cualquier ul */
+ul li {
+  color: purple;
+  border:1px solid purple;
+}
+
+/* > aplica SOLO a los 1eros elementos hijos */
+.regalos > li {
+  font-weight: bold;
+}
