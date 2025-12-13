@@ -1,4 +1,21 @@
+/* selector de etiqueta */
 h1 {
   font-family: Arial;
   font-size:42px;
+}
+
+/* selector universal */
+* {
+  font-style: italic;
+}
+
+/* selector de clase */
+/* va con prefijo . */
+.parrafo {
+  background:peru;
+  font-weight:bold;
+}
+
+.importante {
+  color: yellow;
 }
