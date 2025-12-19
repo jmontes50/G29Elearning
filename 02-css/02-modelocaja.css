@@ -21,3 +21,17 @@ main {
   padding: 10px 20px 30px 40px;
 }
 
+/* DISPLAY */
+/* Porque casi todo elemento en HTML va a tener por defecto un display: block; */
+
+h2 {
+  border:2px solid green;
+  width: 150px;
+  /* display: block; */
+}
+
+p{
+  border:2px solid orangered;
+  width: 220px;
+  /* display: block; */
+}
