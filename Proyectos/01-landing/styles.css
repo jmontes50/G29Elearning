@@ -1,0 +1,20 @@
+/* reset/reinicio css */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* temporal */
+  border:2px solid red;
+}
+
+.contenedor {
+  max-width: 1200px;
+  /* al darle auto, le pedimos al navegador que de un valor automatico */
+  margin:0 auto;
+}
+
+.cabecera {
+  padding: 96px 0;
+  /* text-align me permite solamente alinear el texto */
+  text-align: center;
+}
