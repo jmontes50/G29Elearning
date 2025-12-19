@@ -80,3 +80,27 @@ tr:nth-of-type(even){
 tr:hover {
   background:yellow;
 }
+
+/* Especificidad */
+#pie_pagina {
+  color:brown;
+}
+
+.bloque {
+  color: blueviolet;
+}
+
+footer {
+  font-family: Arial;
+  color: blue;
+  font-weight: bold;
+}
+
+footer {
+  text-decoration: underline;
+  color: peru;
+}
+
+
+
+
