@@ -8,6 +8,15 @@ header {
   box-sizing: border-box;
 }
 
+/* La idea del modelo de caja se resume en todo elemento visual de HTML es una caja y esta formada por el margin, border y padding */
 main {
   border:2px solid blue;
+  /* la forma de aplicar margin y padding puede variar */
+  /* si son 02 valores, el primero es para arriba y abajo el segundo para los costados */
+  margin:20px 40px;
+  /* cuando es 4 valores, los aplica de esta manera:
+  arriba, derecha, abajo, izquierda
+  los esta aplicando en el sentido de las agujas del reloj comenzando desde arriba
+  */
+  padding: 10px 20px 30px 40px;
 }
