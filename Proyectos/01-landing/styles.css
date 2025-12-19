@@ -7,6 +7,18 @@
   border:2px solid red;
 }
 
+body {
+  /* cuando indicamos mas fuentes a utilizar, sucede que si no encuentra saltará a la siguiente */
+  font-family: 'Alata', Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* la , es como un Y */
+h1, h2, h3, h4, h5 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+}
+
 .contenedor {
   max-width: 1200px;
   /* al darle auto, le pedimos al navegador que de un valor automatico */
