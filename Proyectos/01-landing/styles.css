@@ -61,3 +61,8 @@
   background-color: black;
   color:white;
 }
+
+.rectangulo-header {
+  /* las unidades porcentuales toman el elemento padre como referencia */
+  width: 100%;
+}
