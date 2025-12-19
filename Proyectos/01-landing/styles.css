@@ -18,3 +18,14 @@
   /* text-align me permite solamente alinear el texto */
   text-align: center;
 }
+
+.oferta {
+  font-size:12px;
+  padding:4px;
+  background: lightgray;
+  /* redondeado del borde */
+  border-radius:50px;
+  width:100px;
+  margin:0 auto;
+  margin-bottom:20px;
+}
