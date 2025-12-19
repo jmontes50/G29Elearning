@@ -1,0 +1,13 @@
+header {
+  border:2px solid red;
+  margin:20px;
+  padding: 10px;
+  width: 150px; /*ancho*/
+  height: 60px; /*altura*/
+  /* con border-box le decimos que en vez de dar el tamaño solo al contenido, tenga en cuenta el contenido, padding y borde, para la medida que le indiquemos */
+  box-sizing: border-box;
+}
+
+main {
+  border:2px solid blue;
+}
