@@ -29,3 +29,35 @@
   margin:0 auto;
   margin-bottom:20px;
 }
+
+.titulo-principal {
+  font-size:72px;
+  margin-bottom:20px;
+}
+
+.texto-marketing {
+  color: gray;
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.llamada-accion {
+  margin-bottom: 50px;
+}
+
+/* con la btn daremos la forma, es el elemento */
+.btn {
+  padding:15px 20px;
+  border-radius: 50px;
+  margin-left:10px;
+  text-align: center;
+}
+/* con btn-claro y btn-oscuro, sirven de modificadores */
+.btn-claro {
+  border: 2px solid black;
+}
+
+.btn-oscuro {
+  background-color: black;
+  color:white;
+}
