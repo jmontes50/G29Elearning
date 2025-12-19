@@ -35,3 +35,28 @@ p{
   width: 220px;
   /* display: block; */
 }
+
+/* inline, si permite que haya elementos a sus costados, toma sus medidas a partir del contenido que envuelve, es como envolver algo y sellarlo al vancio */
+span{
+  background:yellow;
+  border:2px solid steelblue;
+  width: 100px;
+  height:60px;
+}
+
+label{
+  border:2px solid red;
+  width: 100px;
+}
+
+/* inline-block, permite acomodarse uno al costado del otro pero con la caracteristica de que puedo cambiar el tamaño*/
+input {
+  border:2px solid purple;
+  width: 200px;
+}
+
+button {
+  border:2px solid blue;
+  width: 150px;
+  height: 40px;
+}
