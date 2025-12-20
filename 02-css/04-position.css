@@ -33,6 +33,10 @@ div {
 }
 .caja4 {
   background-color: steelblue;
+  /* fixed se coloca respecto al navegador */
+  position: fixed;
+  right: 100px;
+  bottom:80px;
 }
 .caja5 {
   background-color: purple;
