@@ -8,7 +8,8 @@ main {
   width: 350px;
   height: 1500px;
   border:2px solid blue;
-  margin:30px;
+  margin:80px;
+  position: relative;
 }
 
 div {
@@ -22,6 +23,10 @@ div {
 }
 .caja2 {
   background-color: orange;
+  /* absolute, para el resto de elementos caja 2 no existe,  */
+  position:absolute;
+  top: 60px;
+  left: 120px;
 }
 .caja3 {
   background-color: yellowgreen;
