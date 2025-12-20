@@ -6,7 +6,7 @@
 
 .padre {
   height: 500px;
-  width: 500px;
+  width: 100%;
   border:2px solid blue;
   display:flex;
   /* justify-content, alinear horizontalmente */
@@ -16,6 +16,8 @@
   justify-content: space-evenly;
   /* align-items, alinea de forma vertical */
   align-items: center;
+  gap:20px; /*dar un espaciado entre elementos */
+  flex-direction: row; /*column, flex-direction cambia la orientación del contenedor*/
 }
 
 .hijo{
