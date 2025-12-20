@@ -10,3 +10,18 @@ header {
   font-size: 36px;
   color: blue;
 }
+
+@media (width <= 768px) {
+  /* hoja extra de css */
+  header {
+    color: red;
+  }
+}
+
+@media (width < 440px) {
+  header {
+    color: violet;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+}
