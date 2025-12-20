@@ -35,6 +35,23 @@ h1, h2, h3, h4, h5 {
   margin:0 auto;
 }
 
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:42px 88px;
+}
+
+.links {
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+
+/* HEADER */
+
 .cabecera {
   padding: 96px 0;
   /* text-align me permite solamente alinear el texto */
