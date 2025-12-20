@@ -151,6 +151,16 @@ h1, h2, h3, h4, h5 {
   margin:20px 0 30px 0;
 }
 
+/* para el navbar */
+#checkbox-menu{
+  visibility: hidden;
+  /* display: none; */
+}
+
+.open-menu, .close-menu {
+  display: none;
+}
+
 @media (width <= 768px) {
   /* questions */
   .questions {
@@ -171,5 +181,31 @@ h1, h2, h3, h4, h5 {
 
   .titulo-principal {
     font-size: 40px;
+  }
+
+  /* nav */
+  .open-menu, .close-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .links {
+    background-color: orange;
+    flex-direction: column;
+    gap:40px;
+    font-size: 20px;
+    padding:30px;
+    position:fixed;
+    top: 0;
+    /* vw, es una unidad relativa que toma como referencia el viewport */
+    right:-100vw;
+    width:100vw;
+    /* vh, viewport height */
+    height: 100vh;
+
+  }
+
+  #checkbox-menu:checked ~ .links {
+    right:0;
   }
 }
