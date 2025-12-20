@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5 {
 .questions {
   height: 500px;
   display: flex;
-  padding:32px 0px;
+  padding:64px 0px;
 }
 
 .question-naranja {
@@ -139,4 +139,14 @@ h1, h2, h3, h4, h5 {
 .question-titulo {
   font-size: 54px;
   font-weight: 300;
+}
+
+.question-azul {
+  border-top: 4px solid steelblue;
+  align-self: flex-end;
+}
+
+.question-azul .fa-message {
+  color: steelblue;
+  margin:20px 0 30px 0;
 }
