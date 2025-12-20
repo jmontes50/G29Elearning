@@ -46,8 +46,17 @@ h1, h2, h3, h4, h5 {
 
 .links {
   display: flex;
+  /* brecha */
   gap:20px;
   align-items: center;
+}
+
+.logo {
+  font-size:30px;
+}
+
+.logo h3 {
+  font-weight: 900;
 }
 
 /* HEADER */
@@ -104,4 +113,8 @@ h1, h2, h3, h4, h5 {
 .rectangulo-header {
   /* las unidades porcentuales toman el elemento padre como referencia */
   width: 100%;
+}
+
+.btn-sm {
+  padding:8px 14px;
 }
