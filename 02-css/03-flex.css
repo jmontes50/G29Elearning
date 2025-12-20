@@ -18,6 +18,8 @@
   align-items: center;
   gap:20px; /*dar un espaciado entre elementos */
   flex-direction: row; /*column, flex-direction cambia la orientación del contenedor*/
+  /* wrap no cambia el tamaño de los elementos al reducirse y nowrap hace que reduzcan su ancho */
+  flex-wrap: wrap;
 }
 
 .hijo{
