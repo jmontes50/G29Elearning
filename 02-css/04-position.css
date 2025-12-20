@@ -40,4 +40,7 @@ div {
 }
 .caja5 {
   background-color: purple;
+  /* sticky no se mueve de su posición hasta que ocurra un desplazamiento que lo vaya a ocultar, es ahi donde se comporta como un position fixed */
+  position:sticky;
+  top:20px;
 }
