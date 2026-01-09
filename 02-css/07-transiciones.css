@@ -24,7 +24,11 @@
   width: 300px;
   height: 200px;
   background-color: aquamarine;
-  /* las transformacion en CSS son funciones que dependiendo de cual utilicemos nos van a permitir rotar, escalar, mover, estirar... un elemento */
+  transition-duration: 0.5s;
+}
+
+.caja:hover {
+/* las transformacion en CSS son funciones que dependiendo de cual utilicemos nos van a permitir rotar, escalar, mover, estirar... un elemento */
   transform: rotate(45deg) translate(10px, 20px);
 }
 
