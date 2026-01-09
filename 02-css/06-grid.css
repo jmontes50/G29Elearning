@@ -1,0 +1,17 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.padre {
+  background: aqua;
+  height: 100vh; /*respecto al viewport */
+
+
+}
+
+.item {
+  background-color: lightcoral;
+  border:2px solid red;
+}
