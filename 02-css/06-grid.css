@@ -9,16 +9,26 @@
   height: 100vh; /*respecto al viewport */
   /* grid */
   display: grid;
+  /* gap - brecha */
+  gap: 20px;
   /* el objetivo con grid, es crear una grilla */
   /* grid-template-columns: 250px 250px 250px; */
   /* grid-template-columns: repeat(4, 200px); */
   /* fr - free-space, espacio libre */
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* minmax, me permite indicar un tamaño min y un tamaño max, para c/columna */
+  /* GRID EXPLÍCITO */
   grid-template-columns: repeat(3, minmax(120px, 1fr));
+  grid-template-rows: repeat(3, 200px);
+  /* GRID IMPLÍCITO */
 }
 
 .item {
   background-color: lightcoral;
   border:2px solid red;
+}
+
+.item1 {
+  grid-column: 1 / 3;
+
 }
