@@ -17,4 +17,38 @@
   height: 100px;
   background-color: dodgerblue;
   border-radius: 50%;
+  animation-name: carga;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* @keyframes nombreDeLaAnimación */
+@keyframes carga {
+  /* c/frame vamos a indicar propiedades de css que se van a aplicar en determinado tiempo */
+  0%{
+    /* opacity va de 0 a 1 (1 es 100%) indicando la transparencia de un elemento */
+    opacity: 0;
+    /* translateY, mueve un elemento en el eje Y */
+    transform: scale(0.5) translateY(0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  75% {
+    opacity: 0.7;
+    transform: scale(0.8) translateY(10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0);
+  }
 }
