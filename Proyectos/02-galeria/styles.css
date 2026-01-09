@@ -3,7 +3,7 @@
   padding:0;
   box-sizing: border-box;
   /* temporal */
-  border:"2px solid red"
+  border:"2px solid red";
 }
 
 .contenedor {
@@ -24,4 +24,19 @@
   height:100%;
   /* y para ajustar la proporción de la imagen */
   object-fit: cover;
+}
+
+.cuadro {
+  position: relative;
+}
+
+.cuadro span{
+  position: absolute;
+  top:5px;
+  left:5px;
+  font-weight:bold;
+  font-family: Arial;
+  color: white;
+  /* text-shadow: despX despY tamaño color */
+  text-shadow: 2px 2px 2px black;
 }
