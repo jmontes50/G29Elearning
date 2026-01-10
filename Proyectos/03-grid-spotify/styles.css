@@ -74,5 +74,5 @@ body {
   position:absolute;
   top:60px;
   right: -30px;
-  transform: rotate(25deg);
+  rotate:25deg;
 }
