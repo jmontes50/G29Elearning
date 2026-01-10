@@ -14,6 +14,7 @@
   margin:0 auto;
   padding:40px;
   display: grid;
+  gap:20px;
   /* grid explícito, como una grilla de 4 x 4 */
   grid-template-columns: repeat(4, minmax(150px, 1fr));
   grid-template-rows: repeat(4, minmax(150px, 1fr));
@@ -28,6 +29,17 @@
 
 .cuadro {
   position: relative;
+  /* tenemos filtros como sepia, grayscale, blur, donde generalmente reciben un valor de 0 a 1, donde 1 es el 100% */
+  filter: sepia(0.8);
+  transition-duration: 300ms;
+  transition-property: all;
+}
+
+.cuadro:hover {
+  filter: sepia(0);
+  /* box-shadow: despX despY tamaño color */
+  box-shadow: 0 0 10px black;
+  transform: translate(0, 5px) scale(1.03) rotate(0.5deg);
 }
 
 .cuadro span{
