@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <!-- Equivalencia Tailwind → CSS:
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Equivalencia Tailwind → CSS:
          .card { grid-column: span 1 / span 1; /* col-span-1 */
                   padding: 1rem; /* p-4 */
                   width: 100%; /* w-full */
@@ -18,72 +18,71 @@
          .card .percent { color: #16a34a; /* text-green-600 */ font-size: 0.75rem; /* text-xs */ font-weight: 700; /* font-bold */ }
          .card .compare { font-size: 0.75rem; /* text-xs */ font-weight: 700; /* font-bold */ color: #4b5563; /* text-gray-600 */ }
     -->
-</head>
-<body>
-  <h1 class="text-3xl font-bold">
-    Dashboard
-  </h1>
-  <section class="m-5 border border-gray-600 rounded grid grid-cols-4 p-4 gap-4">
-    <!-- tarjeta -->
-    <div class="col-span-1 p-4 w-full border rounded">
-      <h5 class="text-sm">
-        Savings
-      </h5>
-      <h3 class="text-2xl font-bold">$344.44</h3>
-      <div class="flex justify-between w-full gap-2">
-        <span class="text-green-600 text-xs font-bold">
-          +10.5%
-        </span>
-        <span class="text-xs font-bold text-gray-600">
-          Compared to last month
-        </span>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold">Dashboard</h1>
+    <section
+      class="m-5 border border-gray-600 rounded grid grid-cols-4 p-4 gap-4"
+    >
+      <!-- tarjeta -->
+      <div class="col-span-1 p-4 w-full border rounded">
+        <h5 class="text-sm">Savings</h5>
+        <h3 class="text-2xl font-bold">$344.44</h3>
+        <div class="flex justify-between w-full gap-2">
+          <span class="text-green-600 text-xs font-bold"> +10.5% </span>
+          <span class="text-xs font-bold text-gray-600">
+            Compared to last month
+          </span>
+        </div>
       </div>
-    </div>
-    <!-- tarjeta -->
-    <div class="col-span-1 p-4 w-full border rounded">
-      <h5 class="text-sm">
-        Savings
-      </h5>
-      <h3 class="text-2xl font-bold">$344.44</h3>
-      <div class="flex justify-between w-full gap-2">
-        <span class="text-green-600 text-xs font-bold">
-          +10.5%
-        </span>
-        <span class="text-xs font-bold text-gray-600">
-          Compared to last month
-        </span>
+      <!-- tarjeta -->
+      <div class="col-span-1 p-4 w-full border rounded">
+        <h5 class="text-sm">Savings</h5>
+        <h3 class="text-2xl font-bold">$344.44</h3>
+        <div class="flex justify-between w-full gap-2">
+          <span class="text-green-600 text-xs font-bold"> +10.5% </span>
+          <span class="text-xs font-bold text-gray-600">
+            Compared to last month
+          </span>
+        </div>
       </div>
-    </div>
-    <!-- tarjeta -->
-    <div class="col-span-1 p-4 w-full border rounded">
-      <h5 class="text-sm">
-        Savings
-      </h5>
-      <h3 class="text-2xl font-bold">$344.44</h3>
-      <div class="flex justify-between w-full gap-2">
-        <span class="text-green-600 text-xs font-bold">
-          +10.5%
-        </span>
-        <span class="text-xs font-bold text-gray-600">
-          Compared to last month
-        </span>
+      <!-- tarjeta -->
+      <div class="col-span-1 p-4 w-full border rounded">
+        <h5 class="text-sm">Savings</h5>
+        <h3 class="text-2xl font-bold">$344.44</h3>
+        <div class="flex justify-between w-full gap-2">
+          <span class="text-green-600 text-xs font-bold"> +10.5% </span>
+          <span class="text-xs font-bold text-gray-600">
+            Compared to last month
+          </span>
+        </div>
       </div>
-    </div>
-    <!-- tarjeta -->
-    <div class="col-span-1 p-4 w-full border rounded">
-      <h5 class="text-sm">
-        Savings
-      </h5>
-      <h3 class="text-2xl font-bold">$344.44</h3>
-      <div class="flex justify-between w-full gap-2">
-        <span class="text-green-600 text-xs font-bold">
-          +10.5%
-        </span>
-        <span class="text-xs font-bold text-gray-600">
-          Compared to last month
-        </span>
+      <!-- tarjeta -->
+      <div class="col-span-1 p-4 w-full border rounded">
+        <h5 class="text-sm">Savings</h5>
+        <h3 class="text-2xl font-bold">$344.44</h3>
+        <div class="flex justify-between w-full gap-2">
+          <span class="text-green-600 text-xs font-bold"> +10.5% </span>
+          <span class="text-xs font-bold text-gray-600">
+            Compared to last month
+          </span>
+        </div>
       </div>
-    </div>
-  </section>
-</body>
+      <!-- tabla -->
+      <div class="col-span-4 p-4 border rounded">
+        <table class="table-fixed w-full">
+          <thead>
+            <tr>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">TO/FROM</th>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">DATE</th>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">DESCRIPTION</th>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">AMOUNT</th>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">STATUS</th>
+              <th class="text-xs text-gray-600 text-left border-b border-gray-400 pb-2">ACTION</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section>
+  </body>
 </html>
