@@ -33,6 +33,10 @@
   filter: sepia(0.8);
   transition-duration: 300ms;
   transition-property: all;
+  /* animación */
+  animation-name: entrada;
+  animation-duration:  500ms;
+  animation-timing-function: ease-out;
 }
 
 .cuadro:hover {
@@ -87,4 +91,20 @@
 .cuadro9 {
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+}
+
+/* animación */
+@keyframes entrada {
+  0% {
+    /* al darle scale(0) no se va a ver la imagen */
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
