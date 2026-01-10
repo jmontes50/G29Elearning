@@ -47,3 +47,18 @@ body {
   font-size: var(--size-title);
   margin-bottom: 32px;
 }
+
+.albums-explora {
+  display: grid;
+  gap:20px;
+  /* auto-fit va a utilizar el tamaño mínimo o estático que tenga el grid en cada "casillero" */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.caja-explora {
+  background-color: gray;
+  padding:20px;
+  border-radius: 10px;
+  height: 220px;
+
+}
