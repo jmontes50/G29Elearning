@@ -35,6 +35,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.explora {
+  background-color: var(--secondary-color-02);
+  margin:20px;
+  padding:24px 16px;
+  border-radius:20px;
+}
+
 
 .titulo-explora {
   font-size: var(--size-title);
