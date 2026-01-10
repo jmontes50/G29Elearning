@@ -23,7 +23,20 @@
   --genre-color13: #ba5d07;
 }
 
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--secondary-color-01);
+  color:var(--secondary-color-04);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .titulo-explora {
   font-size: var(--size-title);
+  margin-bottom: 32px;
 }
