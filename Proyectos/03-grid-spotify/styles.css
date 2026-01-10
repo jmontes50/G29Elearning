@@ -1,0 +1,10 @@
+/* variables de css*/
+:root {
+  /* --nombre-variable: elvalor; */
+  --size-title: 36px;
+}
+
+
+.titulo-explora {
+  font-size: var(--size-title);
+}
