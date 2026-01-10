@@ -60,5 +60,19 @@ body {
   padding:20px;
   border-radius: 10px;
   height: 220px;
+  overflow: hidden;
+  position:relative;
+  /* referencia para absolute, por eso el nombre, relativa a */
+}
 
+.titulo-caja {
+  font-size:24px;
+}
+
+.imagen-caja {
+  width:180px;
+  position:absolute;
+  top:60px;
+  right: -30px;
+  transform: rotate(25deg);
 }
