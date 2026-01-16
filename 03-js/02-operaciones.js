@@ -36,3 +36,19 @@ if ((edad >= 18 || tieneEntrada) && !estaBaneado) {
 } else {
   console.log("No, no puede entrar :( ")
 }
+
+//else if, va a ser utilizado para poder manejar otras posibles condiciones
+
+let nota = 60;
+
+if (nota >= 90) {
+  console.log("Obtuviste una A");
+} else if (nota >= 80) {
+  console.log("Obtuviste una B");
+} else if (nota >= 70) {
+  console.log("Obtuviste una C");
+} else if (nota >= 60) {
+  console.log("Obtuviste una D");
+} else { //por defecto
+  console.log("Obtuviste una F");
+}
