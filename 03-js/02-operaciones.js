@@ -52,3 +52,34 @@ if (nota >= 90) {
 } else { //por defecto
   console.log("Obtuviste una F");
 }
+
+//Switch, es mas legible que un else if
+
+let dia = 2; //1-7
+
+//dentro del switch indicamos que expresión vamos a evaluar
+switch (dia) {
+  case 1: //si dia es 1
+    console.log("Lunes");
+    break; //impide la ejecución del resto de cases
+  case 2:
+    console.log("Martes");
+    break;
+  case 3:
+    console.log("Miércoles");
+    break;
+  case 4:
+    console.log("Jueves");
+    break;
+  case 5:
+    console.log("Viernes");
+    break;
+  case 6:
+    console.log("Sábado");
+    break;
+  case 7:
+    console.log("Domingo");
+    break;
+  default: //por defecto
+    console.log("Día no válido");
+}
