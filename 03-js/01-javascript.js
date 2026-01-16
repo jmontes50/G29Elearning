@@ -48,3 +48,27 @@ console.log("División:", division);
 //módulo
 let modulo = 10 % 3;
 console.log("Módulo:", modulo);
+
+//operadores aritmeticos cortos
+let a = 10;
+// a = a + 5
+a += 5;
+console.log("Operador += :", a);
+
+let b = 20;
+//b = b + 1;
+b++;
+console.log("Operador ++ :", b);
+
+let c = 30;
+//c = c - 1;
+c--;
+console.log("Operador -- :", c);
+
+let d = 40;
+d -= 10; //d = d - 10
+console.log("Operador -= :", d);
+
+let e = 100;
+e *= 2; //e = e * 2
+console.log("Operador *= :", e);
