@@ -83,3 +83,18 @@ switch (dia) {
   default: //por defecto
     console.log("Día no válido");
 }
+
+//Bucles o loops
+//for(inicialización; condición; actualización)
+for (let i = 1; i <= 10; i++) {
+  console.log("Número:", i);
+}
+
+for(let j = 5; j >= 1; j--) {
+  console.log("Número al revés:", j);
+  if(j === 3) {
+    // break; //detiene el ciclo
+    continue; //salta a la siguiente iteración
+  }
+  console.log("después del continue:"); //este código no se ejecuta cuando j es 3 por el continue
+}
