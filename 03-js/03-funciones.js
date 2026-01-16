@@ -48,3 +48,23 @@ console.log(resta(75, 10));
 let convertirANumero = (valor) => Number(valor);
 
 console.log(convertirANumero("123")); //123
+
+//scope - ámbito
+let variableGlobal = "Soy una variable global";
+
+let imprimirMensaje = (nombre) => {
+  let saludo = "Hola"; //variable local
+  if(nombre) { //truthy falsy, un string que no este vacio ("") se considera true
+    let mensajePersonalizado = `${saludo} ${nombre}, bienvenido!`; //variable local
+    console.log(mensajePersonalizado, variableGlobal);
+  } else {
+    console.log(saludo)
+
+  }
+  // console.log(mensajePersonalizado) //falla
+}
+// console.log(mensajePersonalizado) //falla
+
+imprimirMensaje("Jorge"); //Hola Jorge, bienvenido!
+
+imprimirMensaje(); //Hola
