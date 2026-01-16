@@ -72,3 +72,28 @@ console.log("Operador -= :", d);
 let e = 100;
 e *= 2; //e = e * 2
 console.log("Operador *= :", e);
+
+//concatenación, es unir 02 strings
+let saludo = "Hola, ";
+let usuario = "Jorge";
+let mensaje = saludo + usuario;
+console.log("Concatenación:", mensaje);
+
+//concatenar con numeros, OJO cuidado
+let otroValor = "205";
+let valor = 100;
+let resultado = otroValor + valor;
+console.log("Concatenación con números:", resultado);
+
+//template literals, template strings o plantillas de texto
+let nombreUsuario = "Ana";
+let edadUsuario = 30;
+
+//usando template literals, necesitamos usar las comillas invertidas ``, el nombre oficial son backticks
+let presentación = `Hola, soy ${nombreUsuario} y tengo ${edadUsuario} años.`;
+
+console.log("Template Literals:", presentación);
+
+let nombreGrupo = "G29";
+let bienvenido = `Bienvenidos, ${nombreGrupo} !!!!! ${2 + 3}`;
+console.log(bienvenido);
