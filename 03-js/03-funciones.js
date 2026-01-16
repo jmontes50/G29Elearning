@@ -23,3 +23,28 @@ let saludar = function (nombre) {
 }
 
 console.log(saludar("Jorge"));
+
+//función flecha, que es una sintaxis más moderna y con un poco más de posibilidades
+// function resta(a, b){
+//   return a - b;
+// }
+
+// let resta = (a, b) => {
+//   return a - b;
+// }
+
+//para utilizar el return automático tiene que ser algo sencillo y va después de la flecha =>
+let resta = (a, b) => a - b;
+
+console.log(resta(75, 10));
+
+// function convertirANumero(valor) {
+//   let numero = Number(valor);
+//   return numero;
+// }
+// let convertirANumero = (valor) => {
+//   return Number(valor)
+// };
+let convertirANumero = (valor) => Number(valor);
+
+console.log(convertirANumero("123")); //123
