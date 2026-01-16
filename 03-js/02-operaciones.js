@@ -98,3 +98,4 @@ for(let j = 5; j >= 1; j--) {
   }
   console.log("después del continue:"); //este código no se ejecuta cuando j es 3 por el continue
 }
+
