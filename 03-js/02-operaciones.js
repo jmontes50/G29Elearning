@@ -23,3 +23,16 @@ if (numeroGanador === 7) {
 } else {
   console.log("Lo siento, sigue intentando");
 }
+
+//operadores lógicos AND (&&), OR (||) y NOT (!)
+//Para un evento tiene que ser mayor de 18 o tener invitación y no estar baneado/bloqueado
+
+let tieneEntrada = true;
+let estaBaneado = false;
+let edadPersona = 17;
+
+if ((edad >= 18 || tieneEntrada) && !estaBaneado) {
+  console.log("Puede entrar al evento")
+} else {
+  console.log("No, no puede entrar :( ")
+}
