@@ -23,3 +23,28 @@ let regalo; //undefined - no definido
 console.log(regalo);
 console.log(typeof regalo);
 
+// Null, no es un primitivo pero es util en ciertos casos
+
+let nulo = null //Null, podemos asignarle otro valor más tarde
+console.log(nulo);
+console.log(typeof nulo);
+
+// operaciones aritméticas y concatenación
+
+//suma
+let suma = 10 + 20;
+console.log("Suma:", suma);
+
+//resta
+let resta = 20 - 10;
+console.log("Resta:", resta);
+//multiplicación
+let multiplicacion = 10 * 5;
+console.log("Multiplicación:", multiplicacion);
+
+//división
+let division = 20 / 2;
+console.log("División:", division);
+//módulo
+let modulo = 10 % 3;
+console.log("Módulo:", modulo);
