@@ -8,6 +8,9 @@
  * Mostrar cuanto se va a pagar
  */
 
+//INICIO DE LA LÓGICA DE LA TIENDA
+/*
+
 let totalPorCantidad = (precioUnitario, cantidad) => {
   console.log("Precio Unitario:", precioUnitario);
   console.log("Cantidad:", cantidad);
@@ -37,3 +40,41 @@ let cantidad = Number(prompt("Ingrese la cantidad a comprar:"));
 
 
 totalPorCantidad(precioUnitario, cantidad);
+
+*/
+//FÍN DE LA LÓGICA DE LA TIENDA */
+
+//Ejemplo 02: pago en cuotas
+/**
+ * una tienda ofrece a sus clientes la posibilidad de pagar en cuotas
+ * con un 1% de interes
+ *
+ * la app debe recibir un monto total a pagar y la cantidad de cuotas
+ */
+
+let pagoEnCuotas = (montoTotal, cantidadCuotas) => {
+  if(montoTotal <= 0 || cantidadCuotas <= 0){
+    console.log("Error, datos inválidos");
+    return;
+  }
+
+  let interes = 0.01;
+
+  let montoBaseCadaCuota = montoTotal / cantidadCuotas;
+
+  let totalAPagar = 0;
+
+  for(let i = 1; i <= cantidadCuotas; i++){
+    let interesCuota = montoBaseCadaCuota * interes;
+    let cuotaFinal = montoBaseCadaCuota + interesCuota;
+
+    totalAPagar = totalAPagar + cuotaFinal;
+
+    console.log(`
+        Cuota: ${i} - S/ ${cuotaFinal}
+      `)
+  }
+  console.log(totalAPagar);
+}
+
+pagoEnCuotas(1000, 5);
