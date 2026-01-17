@@ -23,3 +23,21 @@ let album = {
 }
 console.log(album.canciones[1].nombre);
 console.log(album.certificacion.organismo.rango);
+
+let nums = [1,2,3,4,5];
+
+nums.push(6);
+
+console.log(nums);
+
+let pi = 3.14159;
+
+console.log(pi.toFixed(2));
+
+// let texto = "Hola mundo";
+let texto = new String("Hola mundo");
+
+console.log(texto.toUpperCase());
+console.log(texto + " como estás?");
+
+
