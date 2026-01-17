@@ -11,3 +11,20 @@ console.log(mes)
 
 let anio = navidad.getFullYear();
 console.log(anio);
+
+let dia = navidad.getDate();
+console.log(dia);
+
+//el timestamp esta contando los milisegundos a partir de 01/01/1970
+let timestampNavidad = navidad.getTime();
+console.log("timestamp navidad:", timestampNavidad);
+
+let timestampHoy = hoy.getTime();
+console.log("timestamp hoy:", timestampHoy);
+
+let diferencia = timestampNavidad - timestampHoy;
+console.log(diferencia);
+
+let hastaNavidad = diferencia / 1000 / 60 / 60 / 24;
+
+console.log("hasta navidad", hastaNavidad);
