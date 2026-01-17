@@ -31,6 +31,10 @@ let app = () => {
   }
 
   productos.forEach((producto, index) => {
+    if(producto.precio > presupuesto) {
+      alert(`No puede permitirse el producto: ${producto.nombre}. Precio: $${producto.precio}`);
+      return;
+    }
     //confirm me permite mostrar un cuadro de diálogo con opciones Aceptar y Cancelar, dandome un booleano
     let agregar = confirm(`¿Desea agregar ${producto.nombre} a su carrito? Precio: $${producto.precio}`);
 
