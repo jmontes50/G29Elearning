@@ -44,3 +44,12 @@ let ordered = nums.toSorted(); //mejor utilizar toSorted
 
 console.log("ordenado con sort", ordered);
 console.log(nums)
+
+//reduce, reducir a un solo valor
+let cuotas = [10, 20, 15, 45, 100, 75];
+
+let suma = cuotas.reduce((acum, items) => {
+  return acum + items;
+})
+
+console.log(suma)
