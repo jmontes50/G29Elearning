@@ -22,5 +22,16 @@ console.log(frutas.indexOf("Mango")); //da -1 si no existe
 frutas.forEach((fru, indice, arregloOriginal) => {
   console.log(fru, indice, arregloOriginal);
 })
+//filter
+let filtrado = frutas.filter((fru) => {
+  //retornar una expresión para poder filtrar
+  return fru.includes("i"); //existe este texto dentro de otro
+})
+console.log(filtrado)
 
+//map
+let transformado = frutas.map((fru) => {
+  return fru.toUpperCase(); //transformar a mayúsculas
+})
 
+console.log(transformado);
