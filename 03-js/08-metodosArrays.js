@@ -35,3 +35,12 @@ let transformado = frutas.map((fru) => {
 })
 
 console.log(transformado);
+
+//sorted y toSort
+let nums = [5, 10, 3, 1, 20];
+
+// let ordered = nums.sort(); //No utilicen sort
+let ordered = nums.toSorted(); //mejor utilizar toSorted
+
+console.log("ordenado con sort", ordered);
+console.log(nums)
