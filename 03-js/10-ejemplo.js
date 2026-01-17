@@ -29,6 +29,19 @@ let app = () => {
     alert("Por favor, ingrese un presupuesto válido.");
     return;
   }
+
+  productos.forEach((producto, index) => {
+    //confirm me permite mostrar un cuadro de diálogo con opciones Aceptar y Cancelar, dandome un booleano
+    let agregar = confirm(`¿Desea agregar ${producto.nombre} a su carrito? Precio: $${producto.precio}`);
+
+    if(agregar) {
+      carrito.push(producto);
+      presupuesto -= producto.precio;
+    }
+  })
+
+  console.table(carrito);
+  console.log(`Presupuesto restante: $${presupuesto}`);
 };
 
 app();
