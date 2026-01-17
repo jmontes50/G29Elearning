@@ -37,5 +37,5 @@ let animales = ["Perro", "Gato", "Canario", "Tortuga"];
 console.log(animales[3]);
 
 for(let i = 0; i < animales.length; i++){
-  console.log(i, animales[i]);
+  console.log(i,animales[i]);
 }
