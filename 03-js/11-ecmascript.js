@@ -38,3 +38,33 @@ const saludar = (nombre = "Visitante") => {
 
 saludar("Jorge");
 saludar();
+
+//destructuración de objetos
+const persona = {
+  name: "Jorge",
+  age: 30,
+  city: "Arequipa"
+};
+
+//comunmente
+// const nombrePersona = persona.nombre;
+// const edadPersona = persona.edad;
+// const ciudadPersona = persona.ciudad;
+
+//destructuración, si conozco que propiedades tiene el objeto, podemos extraerlas de esta manera
+const { name, age, city } = persona;
+
+console.log(age);
+
+//destructuración de arreglos
+const colores = ["Rojo", "Verde", "Azul"];
+
+//comúnmente
+// const color1 = colores[0];
+// const color2 = colores[1];
+// const color3 = colores[2];
+
+//destructuración
+const [color1, color2, color3] = colores;
+
+console.log(color2);
