@@ -55,4 +55,4 @@ console.log(frutas2);
 
 let canasta = [...frutas, ...verduras, "Aceite", "Pollo"];
 
-console.log(canasta)
+console.log(canasta);
