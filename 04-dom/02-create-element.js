@@ -32,3 +32,28 @@ console.log(btn_articulos);
 
 //appendChild podemos añadir un elemento como hijo de otro elemento
 raiz_articulos.appendChild(btn_articulos);
+
+//COMBINANDO AMBOS - Crear 01 Componente
+const crearCard = (texto) => {
+  //CREANDO EL ELEMENTO
+  const divCard = document.createElement("div");
+  //LE AÑADIMOS CONTENIDO
+  divCard.innerHTML = `
+    <p>${texto}</p>
+    <button class="btn-card">Ver más"</button>
+  `;
+  //podemos usar querySelector dentro de 01 solo elemento
+  const btn = divCard.querySelector(".btn-card");
+  btn.addEventListener("click",() => {
+    console.log(texto)
+  })
+  console.log(btn);
+  //retonar el objeto
+  return divCard;
+}
+
+const nuevaCard = crearCard("Holaaaaaa");
+const nuevaCard2 = crearCard("Adioooos");
+
+raiz_articulos.appendChild(nuevaCard);
+raiz_articulos.appendChild(nuevaCard2);
