@@ -55,6 +55,9 @@ input.setAttribute("placeholder", "Nuevo placeholder desde JS");
 //obtengamos el botón
 const btn = document.querySelector("#btn");
 
+//En este caso el selector es por etiqueta, directamente es footer
+const footer = document.querySelector("footer");
+
 console.log("botón", btn);
 
 //agreguemos un evento al botón
@@ -62,5 +65,7 @@ btn.addEventListener("click", () => {
   console.log("Diste click en el botón");
   input.setAttribute("type", "text");
 
+  footer.style.backgroundColor = "gray";
+  footer.innerHTML = "<h3>El footer ha sido modificado</h3>";
 });
 
