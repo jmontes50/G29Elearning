@@ -44,3 +44,15 @@ perro2.nombre = "Luna";
 
 console.table(perro);
 console.table(perro2);
+
+//Spread Operator en Arrays
+let frutas = ["Kiwi", "Naranja", "Fresa"];
+let verduras = ["Zanahoria", "Lechuga", "Espinaca"];
+
+let frutas2 = [...frutas];
+
+console.log(frutas2);
+
+let canasta = [...frutas, ...verduras, "Aceite", "Pollo"];
+
+console.log(canasta)
