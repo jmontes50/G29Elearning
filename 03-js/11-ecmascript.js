@@ -23,3 +23,18 @@ const frutas = ["Kiwi", "Naranja", "Piña"];
 frutas.push("Guayaba");
 
 console.log(frutas);
+
+//OPERADOR TERNARIO
+let edad = 17;
+
+let puedeVotar = edad >= 18 ? "Puede votar!!!" : "No puede votar";
+
+console.log(puedeVotar);
+
+//parámetros por defecto
+const saludar = (nombre = "Visitante") => {
+  console.log(`Hola, ${nombre}`);
+}
+
+saludar("Jorge");
+saludar();
