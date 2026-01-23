@@ -46,4 +46,21 @@ const input = document.querySelector("#entrada");
 
 console.log("input", input);
 
+//me permite obtener el valor de un atributo
 console.log("entrada input", input.getAttribute("type"));
+
+//me permite modificar o establecer el valor de un atributo
+input.setAttribute("placeholder", "Nuevo placeholder desde JS");
+
+//obtengamos el botón
+const btn = document.querySelector("#btn");
+
+console.log("botón", btn);
+
+//agreguemos un evento al botón
+btn.addEventListener("click", () => {
+  console.log("Diste click en el botón");
+  input.setAttribute("type", "text");
+
+});
+
