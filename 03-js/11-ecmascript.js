@@ -68,3 +68,20 @@ const colores = ["Rojo", "Verde", "Azul"];
 const [color1, color2, color3] = colores;
 
 console.log(color2);
+
+//desestructuración en parámetros de funciones
+
+const persona2 = {
+  name: "Ana",
+  city: "Lima",
+  age: 25,
+  role: "Developer"
+}
+
+// const mostrarPersona = ( name, age, city ) => {
+const mostrarPersona = ({ name, age, city }) => {
+  console.log(`Nombre: ${name}, Edad: ${age}, Ciudad: ${city}`);
+}
+
+// mostrarPersona( "Jorge","Arequipa", 30  ); //error en el orden
+mostrarPersona(persona2);
