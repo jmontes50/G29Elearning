@@ -30,4 +30,20 @@ console.log("html-interno", h1_titulo.innerHTML);
 
 h1_titulo.innerHTML = "Document Object Model";
 
+//querySelectorAll es un selector que permite seleccionar elementos de la forma que CSS lo hace, toma multiples elementos
+const parrafos = document.querySelectorAll(".parrafo");
 
+console.log("elementos p", parrafos);
+
+parrafos.forEach((p) => {
+  //en css se usa guion medio (snake-case) pero en js camelCase: font-weight -> fontWeight
+  p.style.fontWeight = "bold";
+  p.style.color = "blue";
+});
+
+//va a seleccionar el primer elemento que encuentre, pero también la forma de uso es como la de CSS
+const input = document.querySelector("#entrada");
+
+console.log("input", input);
+
+console.log("entrada input", input.getAttribute("type"));
