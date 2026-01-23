@@ -15,3 +15,19 @@ if(navigator.geolocation) {
     console.log(ubicacion);
   })
 }
+
+//Document Object Model
+console.log("DOCUMENT", document);
+
+//Elementos, selectores de js
+const h1_titulo = document.getElementById("titulo");
+
+console.log(h1_titulo);
+
+h1_titulo.style.color = "red";
+
+console.log("html-interno", h1_titulo.innerHTML);
+
+h1_titulo.innerHTML = "Document Object Model";
+
+
