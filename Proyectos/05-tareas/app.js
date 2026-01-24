@@ -58,3 +58,12 @@ const ComponenteTarea = (objTarea) => {
   })
   return nuevoDiv;
 }
+
+
+//leer las tareas de LS, transformarlas y dibujarlas de nuevo
+const tareasLeidas = localStorage.getItem("tareas");
+console.log("Tareas leidas:",tareasLeidas);
+const tareasLeidasAJS = JSON.parse(tareasLeidas);
+console.log("tareas como JS", tareasLeidasAJS);
+
+dibujarTareas(tareasLeidasAJS);
