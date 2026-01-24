@@ -21,4 +21,33 @@ btn_tarea.addEventListener("click", () => {
   //limpiamos los input para escribir de nuevo
   titulo_tarea.value = "";
   desc_tarea.value = "";
+
+  dibujarTareas(arrTareas);
 })
+
+const dibujarTareas = (tareas) => {
+  lista_tareas.innerHTML = ""; //limpiando
+
+  tareas.forEach((item) => {
+    //en ves de hacer esto
+    // lista_tareas.innerHTML = lista_tareas.innerHTML + `
+    //   <div>${item.titulo}</div>
+    // `;
+    const nuevoDivTarea = ComponenteTarea(item);
+    lista_tareas.appendChild(nuevoDivTarea);
+  })
+}
+
+const ComponenteTarea = (objTarea) => {
+  //de esta manera se puede crear un elemento, desde el lado de JS
+  const nuevoDiv = document.createElement("div");
+  nuevoDiv.innerHTML = `
+    <label>${objTarea.titulo}</label>
+    <button class="btn-lista">Ver Info</button>
+  `;
+  const btn_lista = nuevoDiv.querySelector(".btn-lista");
+  btn_lista.addEventListener("click", () => {
+    alert(objTarea.descripcion);
+  })
+  return nuevoDiv;
+}
