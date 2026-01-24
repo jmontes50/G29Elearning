@@ -39,8 +39,10 @@ const dibujarTareas = (tareas) => {
 }
 
 const ComponenteTarea = (objTarea) => {
+  console.log(objTarea);
   //de esta manera se puede crear un elemento, desde el lado de JS
   const nuevoDiv = document.createElement("div");
+  console.log(nuevoDiv)
   nuevoDiv.innerHTML = `
     <label>${objTarea.titulo}</label>
     <button class="btn-lista">Ver Info</button>
