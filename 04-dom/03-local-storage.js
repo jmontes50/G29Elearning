@@ -24,6 +24,10 @@ const mensajeLeido = localStorage.getItem("mensaje");
 
 console.log(mensajeLeido);
 
+const mensajeLeidoAJS = JSON.parse(mensajeLeido);
+
+console.log(mensajeLeidoAJS);
+
 btn_eliminar.addEventListener("click", () => {
   localStorage.removeItem("mensaje");
 })
