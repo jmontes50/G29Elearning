@@ -1,5 +1,6 @@
 const input_recordar = document.querySelector("#input-recordar");
 const btn_recordar = document.querySelector("#btn-recordar");
+const btn_eliminar = document.querySelector("#btn-eliminar");
 
 btn_recordar.addEventListener("click", () => {
   // console.log(input_recordar.value);
@@ -11,3 +12,7 @@ btn_recordar.addEventListener("click", () => {
 const mensajeLeido = localStorage.getItem("mensaje");
 
 console.log(mensajeLeido);
+
+btn_eliminar.addEventListener("click", () => {
+  localStorage.removeItem("mensaje");
+})
