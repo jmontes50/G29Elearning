@@ -37,6 +37,14 @@ class User {
     }
     this.#email = nuevoEmail;
   }
+  verificarPassword (password) {
+    return this.#compararPassword(password);
+  }
+
+  //no es nada más que una función dentro de la clase
+  #compararPassword (password) {
+    return this.#password === password;
+  }
 }
 
 //instanciar, instancia
@@ -45,11 +53,12 @@ const usuario3 = new User("Jorge", "Av", "ceviche");
 
 console.log(usuario2);
 
+console.log(usuario2.verificarPassword("aqp"));
 
 // usuario.password = "anticuchos";
 // console.log(usuario)
 
-// usuario3.#password = "adobo";
+// usuario3.password = "adobo";
 
 usuario3.email = "j@gmail.com";
 
