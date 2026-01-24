@@ -23,6 +23,11 @@ btn_tarea.addEventListener("click", () => {
   desc_tarea.value = "";
 
   dibujarTareas(arrTareas);
+
+  //guardar las tareas en el localStorage
+  const arrTareasJSON = JSON.stringify(arrTareas);
+  console.log("arrTareas a JSON", arrTareasJSON);
+  localStorage.setItem("tareas", arrTareasJSON);
 })
 
 const dibujarTareas = (tareas) => {
