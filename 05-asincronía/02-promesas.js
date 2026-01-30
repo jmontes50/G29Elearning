@@ -32,10 +32,25 @@ const buscarNombre = () => {
   })
 }
 
+const tieneCreditos = () => new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const res = Math.random();
+    if(res > 0.5){
+      resolve(`Si tiene creditos, ${res}`);
+    }else {
+      reject(`No tiene creditos ${res}`);
+    }
+  }, 3000)
+})
+
 buscarNombre()
 .then((rpta) => { //resolve
   console.log(rpta)
+  return tieneCreditos(); //retornando una nueva promesa
 }) //positivo
+.then((rpta2) => {
+  console.log(rpta2)
+})
 .catch((error) => { //reject
   console.log(error)
 })//negativo
