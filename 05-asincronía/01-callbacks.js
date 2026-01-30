@@ -2,7 +2,7 @@ console.log("1. Hola!");
 
 console.log("2. Como estai");
 
-alert("Estoy bien! (bloqueante)");
+// alert("Estoy bien! (bloqueante)");
 
 //setTimeout me permite ejecutar una función después de un tiempo determinado
 setTimeout(() => {
