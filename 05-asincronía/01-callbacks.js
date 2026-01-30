@@ -14,3 +14,27 @@ setTimeout(() => {
 // }, 2000);
 
 console.log("4. Adiós!");
+
+// Array de nombres de longitud 100
+const nombres = Array.from({ length: 100 }, (_, i) => `Nombre ${i + 1}`);
+
+// Verificación rápida
+// console.log('nombres.length =', nombres.length); // 100
+// console.log('Primeros 5:', nombres.slice(0, 5));
+
+console.log(nombres);
+const buscarNombre = (nombreABuscar, callback) => {
+  for (let i = 0; i < nombres.length; i++) {
+    if (nombres[i] === nombreABuscar) {
+      // console.log("Nombre encontrado:", nombres[i]);
+      // break;
+      // Si encontramos el nombre, llamamos al callback con null (sin error) y el nombre encontrado
+      return callback(i);
+    }
+  }
+};
+
+buscarNombre("Nombre 90", (indice) => {
+  console.log(`Nombre encontrado en el indice: ${indice}`);
+});
+
