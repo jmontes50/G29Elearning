@@ -14,6 +14,24 @@ const obtenerUsuarios = async (divRaiz, dibujarUsuario) => {
   }
 }
 
+const crearUsuario = async (objUsuario) => {
+  try {
+    const cabeceras = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: objUsuario
+    }
+    const response = await fetch("https://697c2626889a1aecfeb18999.mockapi.io/usuarios", cabeceras);
+    const datos = await response.json();
+    return datos;
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
-  obtenerUsuarios
+  obtenerUsuarios,
+  crearUsuario
 }
