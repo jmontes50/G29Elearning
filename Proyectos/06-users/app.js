@@ -1,7 +1,10 @@
 import { obtenerUsuarios } from "./userService.js";
 
 const divRaiz = document.querySelector("#raiz");
-
+const formCrearUsuario = document.querySelector("#form-crear-usuario");
+const inputNombre = document.querySelector("#input-nombre");
+const inputEmail = document.querySelector("#input-email");
+const inputTelefono = document.querySelector("#input-telefono");
 /*
 const obtenerUsuarios = async () => {
   try {
@@ -17,6 +20,8 @@ const obtenerUsuarios = async () => {
   }
 }
 */
+
+
 
 const dibujarUsuario = (usuario) => {
   const divUsuario = document.createElement("div");
