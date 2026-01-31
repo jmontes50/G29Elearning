@@ -21,8 +21,6 @@ const obtenerUsuarios = async () => {
 }
 */
 
-
-
 const dibujarUsuario = (usuario) => {
   const divUsuario = document.createElement("div");
   divUsuario.innerHTML = `
@@ -32,5 +30,15 @@ const dibujarUsuario = (usuario) => {
   `;
   return divUsuario;
 }
+
+//El evento submit del formulario se dispara al dar click en el botón de enviar o presionar enter dentro de un form
+formCrearUsuario.addEventListener("submit", () => {
+  const nuevoUsuario = {
+    nombre_completo: inputNombre.value,
+    correo: inputEmail.value,
+    telefono: inputTelefono.value
+  }
+  console.log(nuevoUsuario);
+})
 
 obtenerUsuarios(divRaiz, dibujarUsuario);
