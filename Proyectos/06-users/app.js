@@ -32,7 +32,10 @@ const dibujarUsuario = (usuario) => {
 }
 
 //El evento submit del formulario se dispara al dar click en el botón de enviar o presionar enter dentro de un form
-formCrearUsuario.addEventListener("submit", () => {
+formCrearUsuario.addEventListener("submit", (evento) => {
+  console.log(evento);
+  //con preventDefault prevenimos el evento por defecto que tienen algunos elementos como un hipervinculo o un formulario
+  evento.preventDefault();
   const nuevoUsuario = {
     nombre_completo: inputNombre.value,
     correo: inputEmail.value,
