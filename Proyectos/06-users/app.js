@@ -1,4 +1,4 @@
-import { obtenerUsuarios } from "./userService.js";
+import { obtenerUsuarios, crearUsuario } from "./userService.js";
 
 const divRaiz = document.querySelector("#raiz");
 const formCrearUsuario = document.querySelector("#form-crear-usuario");
@@ -32,7 +32,7 @@ const dibujarUsuario = (usuario) => {
 }
 
 //El evento submit del formulario se dispara al dar click en el botón de enviar o presionar enter dentro de un form
-formCrearUsuario.addEventListener("submit", (evento) => {
+formCrearUsuario.addEventListener("submit", async (evento) => {
   console.log(evento);
   //con preventDefault prevenimos el evento por defecto que tienen algunos elementos como un hipervinculo o un formulario
   evento.preventDefault();
@@ -41,7 +41,9 @@ formCrearUsuario.addEventListener("submit", (evento) => {
     correo: inputEmail.value,
     telefono: inputTelefono.value
   }
-  console.log(nuevoUsuario);
+  // console.log(nuevoUsuario);
+  const info = await crearUsuario(nuevoUsuario);
+  console.log(info);
 })
 
 obtenerUsuarios(divRaiz, dibujarUsuario);
