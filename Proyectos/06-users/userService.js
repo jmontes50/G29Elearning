@@ -16,6 +16,7 @@ const obtenerUsuarios = async (divRaiz, dibujarUsuario) => {
 
 const crearUsuario = async (objUsuario) => {
   try {
+    //lo transformamos a JSON
     const usuarioJSON = JSON.stringify(objUsuario);
     console.log("usuario json", usuarioJSON);
     const cabeceras = {
@@ -23,6 +24,7 @@ const crearUsuario = async (objUsuario) => {
       headers: {
         "Content-Type": "application/json",
       },
+      //y el JSON lo agregamos al body
       body: usuarioJSON
     }
     const response = await fetch("https://697c2626889a1aecfeb18999.mockapi.io/usuarios", cabeceras);
