@@ -43,6 +43,8 @@ formCrearUsuario.addEventListener("submit", async (evento) => {
   }
   // console.log(nuevoUsuario);
   const info = await crearUsuario(nuevoUsuario);
+  //después de crear un usuario volvemos a obtener los usuarios para que aparezca el usuario creado
+  await obtenerUsuarios(divRaiz, dibujarUsuario)
   console.log(info);
 })
 

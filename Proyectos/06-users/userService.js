@@ -2,6 +2,8 @@
 
 const obtenerUsuarios = async (divRaiz, dibujarUsuario) => {
   try {
+    //para no duplicar registros estamos "limpiando" el div donde tenemos los usuarios
+    divRaiz.innerHTML = "";
     const response = await fetch("https://697c2626889a1aecfeb18999.mockapi.io/usuarios");
     const datos = await response.json();
     console.log(datos);
