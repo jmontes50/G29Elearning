@@ -15,12 +15,18 @@ const App = () => {
   const texto2 = "Texto 2";
   const texto3 = "Texto 3";
 
+  const mostrarSaludo = () => {
+    alert("Hola desde función");
+  }
+
   // Si deseamos combinar/utilizar JS dentro de JSX, debemos usar llaves {}
   return (
     <main>
       <div>{titulo}</div>
       {console.log("Hola desde JSX")}
       <div>Hola</div>
+      {/* Para los eventos en JSX, llamamos al evento con el prefijo on onClick, onSubmit, ese onClick debe tener la función a ejecutar */}
+      <button onClick={mostrarSaludo}>Botón</button>
       {/* 4. Toda etiqueta/componente debe tener etiqueta de cierre o autocerrarse */}
       <hr />
       {/* {Parrafo(texto1)} */}
