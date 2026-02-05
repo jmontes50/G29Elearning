@@ -19,6 +19,10 @@ const App = () => {
     alert("Hola desde función");
   }
 
+  const saludoDesdeComponente = (nombre) => {
+    alert(`Saludo desde componente: ${nombre}`);
+  }
+
   // Si deseamos combinar/utilizar JS dentro de JSX, debemos usar llaves {}
   return (
     <main>
@@ -30,9 +34,21 @@ const App = () => {
       {/* 4. Toda etiqueta/componente debe tener etiqueta de cierre o autocerrarse */}
       <hr />
       {/* {Parrafo(texto1)} */}
-      <Parrafo texto={texto1} numero={10} />
-      <Parrafo texto={texto2} numero={20} />
-      <Parrafo texto={texto3} numero={100} />
+      <Parrafo
+        texto={texto1}
+        numero={10}
+        accion={saludoDesdeComponente}
+      />
+      <Parrafo
+        texto={texto2}
+        numero={20}
+        accion={saludoDesdeComponente}
+      />
+      <Parrafo
+        texto={texto3}
+        numero={100}
+        accion={saludoDesdeComponente}
+      />
     </main>
   )
 }
