@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Mostrar from "./Mostrar";
 
 const App = () => {
   //tiene que estar dentro del componente
@@ -32,6 +33,8 @@ const App = () => {
         value={valor}
         onChange={manejarInput}
       />
+      <hr/>
+      <Mostrar num={numero} />
     </>
   );
 }
