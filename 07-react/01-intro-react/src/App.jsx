@@ -4,6 +4,9 @@
 //1. El componente debe llamarse con mayúscula. (App, Tarjeta, Barra)
 //2. Debe devolver un solo elemento padre. (div, section, fragment)
 
+//NT: los import no requieren la extensión del archivo (siempre y cuando sea .js o .jsx)
+import Parrafo from "./Parrafo";
+
 const App = () => {
   console.log("Hola desde App.jsx");
 
@@ -15,6 +18,10 @@ const App = () => {
       <div>{titulo}</div>
       {console.log("Hola desde JSX")}
       <div>Hola</div>
+      {/* 4. Toda etiqueta/componente debe tener etiqueta de cierre o autocerrarse */}
+      <hr />
+      <Parrafo />
+      <Parrafo />
     </main>
   )
 }
