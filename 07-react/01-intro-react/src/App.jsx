@@ -2,7 +2,7 @@
 
 //Reglas
 //1. El componente debe llamarse con mayúscula. (App, Tarjeta, Barra)
-//2. Debe devolver un solo elemento padre. (div, section, fragment)
+
 
 //NT: los import no requieren la extensión del archivo (siempre y cuando sea .js o .jsx)
 import Parrafo from "./Parrafo";
@@ -23,6 +23,7 @@ const App = () => {
     alert(`Saludo desde componente: ${nombre}`);
   }
 
+  //2. Debe retornar un solo elemento padre. (div, section, fragment)
   // Si deseamos combinar/utilizar JS dentro de JSX, debemos usar llaves {}
   return (
     <main>
