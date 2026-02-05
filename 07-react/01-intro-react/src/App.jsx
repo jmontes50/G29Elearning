@@ -11,6 +11,9 @@ const App = () => {
   console.log("Hola desde App.jsx");
 
   const titulo = "Mi App desde una variable";
+  const texto1 = "Texto 1";
+  const texto2 = "Texto 2";
+  const texto3 = "Texto 3";
 
   // Si deseamos combinar/utilizar JS dentro de JSX, debemos usar llaves {}
   return (
@@ -20,8 +23,9 @@ const App = () => {
       <div>Hola</div>
       {/* 4. Toda etiqueta/componente debe tener etiqueta de cierre o autocerrarse */}
       <hr />
-      <Parrafo />
-      <Parrafo />
+      <Parrafo texto={texto1} />
+      <Parrafo texto={texto2} />
+      <Parrafo texto={texto3} />
     </main>
   )
 }
