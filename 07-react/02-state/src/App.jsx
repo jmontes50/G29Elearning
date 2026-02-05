@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Mostrar from "./Mostrar";
+import Cambiar from "./Cambiar";
 
 const App = () => {
   //tiene que estar dentro del componente
@@ -35,6 +36,8 @@ const App = () => {
       />
       <hr/>
       <Mostrar num={numero} />
+      <hr/>
+      <Cambiar funcion={setNumero} />
     </>
   );
 }
