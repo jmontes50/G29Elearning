@@ -4,6 +4,8 @@ const Parrafo = (props) => {
   console.log("props",props);
   return <p>
     Este es un Párrafo: {props.texto}
+    <br />
+    Este es el número: {props.numero}
     </p>
 }
 

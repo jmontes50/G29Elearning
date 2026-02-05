@@ -23,9 +23,10 @@ const App = () => {
       <div>Hola</div>
       {/* 4. Toda etiqueta/componente debe tener etiqueta de cierre o autocerrarse */}
       <hr />
-      <Parrafo texto={texto1} />
-      <Parrafo texto={texto2} />
-      <Parrafo texto={texto3} />
+      {/* {Parrafo(texto1)} */}
+      <Parrafo texto={texto1} numero={10} />
+      <Parrafo texto={texto2} numero={20} />
+      <Parrafo texto={texto3} numero={100} />
     </main>
   )
 }
