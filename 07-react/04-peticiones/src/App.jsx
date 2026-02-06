@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const App = () => {
 
+  //null, undefined, "", 0 son equivalentes a false
   const [productos, setProductos] = useState(null);
   const [contador, setContador] = useState(0);
 
@@ -28,7 +29,15 @@ const App = () => {
   return (
     <div>
       <h3>Peticiones</h3>
-      {productos}
+      {/* renderizado de listas, transformar datos a algo que entienda React como JSX */}
+      {/*al agregar productos && es como hacer un IF aprovechando el operador AND &&  */}
+      {productos && productos.map((item) => {
+        return <p>{item.nombre_completo}</p>
+      })}
+
+
+
+
       <hr/>
       <h4>{contador}</h4>
       <button onClick={() => {
