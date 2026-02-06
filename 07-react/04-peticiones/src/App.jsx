@@ -13,17 +13,29 @@ const App = () => {
     console.log("Effect!", contador);
     //cuando indicamos un [] en las dependencias el useEffect se ejecutará Solo '1 vez despues del montaje del componente
 
-    fetch(URI)
-    .then((rpta) => {
-      return rpta.json();
-    })
-    .then((data) => {
-      console.log(data);
-      setProductos(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+    // fetch(URI)
+    // .then((rpta) => {
+    //   return rpta.json();
+    // })
+    // .then((data) => {
+    //   console.log(data);
+    //   setProductos(data);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // })
+    const getData = async () => {
+      try {
+        const rpta = await fetch(URI);
+        console.log(rpta)
+        const data = await rpta.json();
+        console.log(data)
+        setProductos(data);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getData();
   },[])
 
   return (
