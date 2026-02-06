@@ -31,12 +31,11 @@ const App = () => {
       <h3>Peticiones</h3>
       {/* renderizado de listas, transformar datos a algo que entienda React como JSX */}
       {/*al agregar productos && es como hacer un IF aprovechando el operador AND &&  */}
-      {productos && productos.map((item) => {
+      {/* Siempre que hagamos renderizado listas a c/item hay que indicarle su key que tiene que ser único */}
+      {/* {productos && productos.map((item) => {
         return <p>{item.nombre_completo}</p>
-      })}
-
-
-
+      })} */}
+      {productos && productos.map((item) => (<p key={item.id}>{item.nombre_completo}</p>))}
 
       <hr/>
       <h4>{contador}</h4>
