@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
   const [contador, setContador] = useState(10000);
   const [interruptor, setInterruptor] = useState(false);
+
+  console.log(interruptor);
+  console.log(setInterruptor);
 
   const manejarClick = () => {
     setContador(contador + 1);
@@ -10,6 +13,11 @@ const App = () => {
 
   //cuando cambiamos algún estado, el componente entero vuelve a ejecutarse, pero con la información del estado ya actualizado.
   console.log("Cambio!!", contador);
+
+  //Tanto al iniciar como al cambiar un estado el useEffect buscará ejecutarse
+  useEffect(() => {
+    console.log("Escuchandoooo!");
+  }, [interruptor])
 
   return (
     <div>
