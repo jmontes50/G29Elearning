@@ -6,6 +6,7 @@ const App = () => {
 
   console.log(interruptor);
   console.log(setInterruptor);
+  console.log("1. ejecutando código componente");
 
   const manejarClick = () => {
     setContador(contador + 1);
@@ -16,11 +17,12 @@ const App = () => {
 
   //Tanto al iniciar como al cambiar un estado el useEffect buscará ejecutarse
   useEffect(() => {
-    console.log("Escuchandoooo!");
+    console.log("2. Escuchando en useEffect!");
   }, [interruptor])
 
   return (
     <div>
+      {console.log("3. dentro del JSX en el return")}
       <h2>Contador: {contador}</h2>
       <button onClick={manejarClick}>Aumentar</button>
       <hr />
