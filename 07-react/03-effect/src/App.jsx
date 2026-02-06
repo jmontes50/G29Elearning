@@ -23,6 +23,9 @@ const App = () => {
         <span>Esta prendido</span> :
         <span>Esta apagado</span>}
       </p>
+      <button onClick={() => {setInterruptor(!interruptor)}}>
+        Prender/Apagar
+      </button>
     </div>
   );
 };
