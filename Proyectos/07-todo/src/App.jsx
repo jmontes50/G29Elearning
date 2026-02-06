@@ -1,7 +1,7 @@
 /**
  * 1. de donde obtengo los datos
  */
-import { useState } from "react"
+import { useState } from "react";
 
 const App = () => {
   const [tareas, setTareas] = useState([]);
@@ -10,18 +10,16 @@ const App = () => {
   const manejarInput = (e) => {
     console.log(e.target.value);
     setInputTarea(e.target.value);
-  }
+  };
 
   const anadirTarea = () => {
     //hace una copia del array de tareas con un spread operator y le añade la nueva tarea al final
     setTareas([...tareas, inputTarea]);
     //limpiamos el input después de añadir la tarea
     setInputTarea("");
+  };
 
-
-  }
-
-  console.log(tareas)
+  console.log(tareas);
 
   return (
     <div>
@@ -34,9 +32,15 @@ const App = () => {
           onChange={manejarInput}
         />
         <button onClick={anadirTarea}>Añadir</button>
+        <hr />
+        <div>
+          {tareas.map((tarea, index) => (
+            <div key={index}>{tarea}</div>
+          ))}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
