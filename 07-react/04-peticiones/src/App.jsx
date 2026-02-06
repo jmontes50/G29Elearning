@@ -18,6 +18,7 @@ const App = () => {
     })
     .then((data) => {
       console.log(data);
+      setProductos(data);
     })
     .catch((error) => {
       console.log(error);
