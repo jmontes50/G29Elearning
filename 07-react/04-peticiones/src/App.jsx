@@ -5,9 +5,24 @@ const App = () => {
   const [productos, setProductos] = useState(null);
   const [contador, setContador] = useState(0);
 
+  const URI = "https://697c2626889a1aecfeb18999.mockapi.io/usuarios";
+
   useEffect(() => {
     console.log(productos);
-  }, [])
+    console.log("Effect!", contador);
+    //cuando indicamos un [] en las dependencias el useEffect se ejecutará Solo '1 vez despues del montaje del componente
+
+    fetch(URI)
+    .then((rpta) => {
+      return rpta.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  },[])
 
   return (
     <div>
