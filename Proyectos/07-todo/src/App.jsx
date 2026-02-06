@@ -12,6 +12,17 @@ const App = () => {
     setInputTarea(e.target.value);
   }
 
+  const anadirTarea = () => {
+    //hace una copia del array de tareas con un spread operator y le añade la nueva tarea al final
+    setTareas([...tareas, inputTarea]);
+    //limpiamos el input después de añadir la tarea
+    setInputTarea("");
+
+
+  }
+
+  console.log(tareas)
+
   return (
     <div>
       <div>
@@ -22,7 +33,7 @@ const App = () => {
           // Es el evento que se dispara cuando el valor del input cambia
           onChange={manejarInput}
         />
-        <button>Añadir</button>
+        <button onClick={anadirTarea}>Añadir</button>
       </div>
     </div>
   )
