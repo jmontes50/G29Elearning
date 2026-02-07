@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { requestProducts } from "../services/productosService"
+import TableProducts from "../components/TableProducts";
 
 const DashboardPage = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +19,10 @@ const DashboardPage = () => {
   }, []);
 
   return (
-    <div>DashboardPage</div>
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
+      <TableProducts products={products} />
+    </div>
   )
 }
 
