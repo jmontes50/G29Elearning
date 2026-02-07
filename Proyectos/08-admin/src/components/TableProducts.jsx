@@ -1,5 +1,4 @@
 const TableProducts = (props) => {
-
   return (
     // En react para algunos atributos de HTML se usan nombres diferentes, por ejemplo className en vez de class, htmlFor en vez de for.
     <table className="table">
@@ -21,11 +20,19 @@ const TableProducts = (props) => {
             <td>{product.descripcion}</td>
             <td>{product.stock}</td>
             <td>{`S/ ${product.precio}`}</td>
+            {/* para cuando usamos estilos inline (style) tenemos que usarlos de la forma que JS los usa, como un objeto */}
+            <td>
+              <img
+                src={product.imagen}
+                alt={product.nombre}
+                style={{ width: "65px", height:"65px", borderRadius: "5px" }}
+              />
+            </td>
           </tr>
         ))}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default TableProducts
+export default TableProducts;
