@@ -9,9 +9,21 @@ const TableProducts = (props) => {
           <th>Descripción</th>
           <th>Stock</th>
           <th>Precio</th>
+          <th>Imagen</th>
           <th>Acciones</th>
         </tr>
       </thead>
+      <tbody>
+        {/* renderizado de listas */}
+        {props.products.map((product) => (
+          <tr key={product.id}>
+            <td>{product.nombre}</td>
+            <td>{product.descripcion}</td>
+            <td>{product.stock}</td>
+            <td>{`S/ ${product.precio}`}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   )
 }
