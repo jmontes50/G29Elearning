@@ -28,6 +28,11 @@ const TableProducts = (props) => {
                 style={{ width: "65px", height:"65px", borderRadius: "5px" }}
               />
             </td>
+            <td>
+              {props.actions.map((action, index) => (
+                <span key={index}>{action.component(product.id)}</span>
+              ))}
+            </td>
           </tr>
         ))}
       </tbody>
