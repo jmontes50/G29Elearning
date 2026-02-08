@@ -1,4 +1,4 @@
-# G11 – MVP CRUD con React
+# G29 elearning – MVP CRUD con React
 
 ## Índice
 1. [Resumen del proyecto y objetivos](#resumen-del-proyecto-y-objetivos)  
