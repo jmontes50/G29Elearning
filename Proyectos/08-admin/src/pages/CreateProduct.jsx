@@ -15,21 +15,25 @@ const CreateProduct = () => {
       inputNombre: "Nombre",
       tipo: "text",
       placeholder: "Ingresa el nombre del producto",
+      name:"nombre"
     },
     {
       inputNombre: "Descripción",
       tipo: "text",
       placeholder: "Ingrese descripción",
+      name:"descripcion"
     },
     {
       inputNombre: "Precio",
       tipo: "number",
-      placeholder: "Ingresa el precii del producto",
+      placeholder: "Ingresa el precio del producto",
+      name:"precio"
     },
     {
       inputNombre: "Stock",
       tipo: "number",
       placeholder: "Ingresa la cantidad almacenada",
+      name: "stock"
     },
   ];
 
