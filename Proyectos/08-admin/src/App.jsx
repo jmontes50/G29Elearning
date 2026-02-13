@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage"
+import CreateProduct from "./pages/CreateProduct";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Routes>
         {/* aquí adentro podemos definir las rutas */}
         <Route path="/" element={<DashboardPage />} />
+        <Route path="/crear-producto" element={<CreateProduct />} />
       </Routes>
     </BrowserRouter>
   )
