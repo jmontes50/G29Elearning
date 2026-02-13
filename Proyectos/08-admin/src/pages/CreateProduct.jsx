@@ -72,6 +72,7 @@ const CreateProduct = () => {
           manejarInputs={manejarInputs}
          />
       ))}
+      <button type="submit" className="btn btn-primary">Guardar</button>
     </form>
   </div>;
 };
