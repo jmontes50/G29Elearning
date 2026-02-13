@@ -7,8 +7,9 @@ const Input = (props) => {
       <input
         type={props.tipo}
         placeholder={props.placeholder}
-        value={""}
-        onChange={() => {}}
+        // producto["descripcion"]
+        value={props.value[props.name]}
+        onChange={props.manejarInputs}
         className='input w-full'
       />
     </div>

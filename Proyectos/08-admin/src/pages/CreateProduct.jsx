@@ -37,6 +37,10 @@ const CreateProduct = () => {
     },
   ];
 
+  const manejarInputs = (evento ) => {
+    console.log(evento.target)
+  }
+
   return <div>
     <h2 className="text-3xl mb-4">Crear Producto</h2>
     <div>
@@ -46,6 +50,10 @@ const CreateProduct = () => {
           inputNombre={input.inputNombre}
           tipo={input.tipo}
           placeholder={input.placeholder}
+          name={input.name}
+          // props para componentes controlados
+          value={producto}
+          manejarInputs={manejarInputs}
          />
       ))}
     </div>
