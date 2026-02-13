@@ -18,4 +18,17 @@ const requestProducts = async () => {
   }
 }
 
-export { requestProducts };
+const createProduct = async (productData) => {
+  try {
+    const response = await axios.post(BASE_URL, productData);
+    //201 es el código de estado para "creado"
+    if(response.status === 201) {
+      return response.data;
+    }
+    throw new Error("Error al crear el producto");
+  } catch (error) {
+    throw error;
+  }
+}
+
+export { requestProducts, createProduct };
