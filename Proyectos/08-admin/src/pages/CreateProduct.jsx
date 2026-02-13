@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "../components/Input";
+import { createProduct } from "../services/productosService";
 
 const CreateProduct = () => {
   const [producto, SetProducto] = useState({
@@ -46,9 +47,19 @@ const CreateProduct = () => {
     })
   }
 
+  const manejarSubmit = async (evento) => {
+    evento.preventDefault(); //evita que se recargue la página
+    try {
+      const nuevoProducto = await createProduct(producto);
+      console.log("Producto creado:", nuevoProducto);
+    } catch (error) {
+      console.error("Error al crear el producto:", error);
+    }
+  }
+
   return <div>
     <h2 className="text-3xl mb-4">Crear Producto</h2>
-    <div>
+    <form onSubmit={manejarSubmit}>
       {inputs.map((input, index) => (
         <Input
           key={index}
@@ -61,7 +72,7 @@ const CreateProduct = () => {
           manejarInputs={manejarInputs}
          />
       ))}
-    </div>
+    </form>
   </div>;
 };
 
