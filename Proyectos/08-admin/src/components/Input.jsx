@@ -1,7 +1,9 @@
 const Input = (props) => {
   return (
-    <div>
-      <label>{props.inputNombre}</label>
+    <div className="mb-3 flex flex-col gap-3">
+      <label className="font-semibold">
+        {props.inputNombre}
+      </label>
       <input
         type={props.tipo}
         placeholder={props.placeholder}
