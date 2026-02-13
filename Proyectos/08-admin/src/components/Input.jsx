@@ -10,6 +10,7 @@ const Input = (props) => {
         // producto["descripcion"]
         value={props.value[props.name]}
         onChange={props.manejarInputs}
+        name={props.name}
         className='input w-full'
       />
     </div>
