@@ -9,7 +9,7 @@ const Input = (props) => {
         placeholder={props.placeholder}
         value={""}
         onChange={() => {}}
-        className='input'
+        className='input w-full'
       />
     </div>
   )
