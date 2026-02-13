@@ -8,6 +8,8 @@ const Input = (props) => {
         type={props.tipo}
         placeholder={props.placeholder}
         // producto["descripcion"]
+        //props.value es cada objeto
+        //props.name es la propiedad del objeto
         value={props.value[props.name]}
         onChange={props.manejarInputs}
         name={props.name}
