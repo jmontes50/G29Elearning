@@ -38,7 +38,12 @@ const CreateProduct = () => {
   ];
 
   const manejarInputs = (evento ) => {
-    console.log(evento.target)
+    const name = evento.target.name;
+    const value = evento.target.value;
+    SetProducto({
+      ...producto, //copia del estado actual
+      [name]: value //actualiza la propiedad en base a name y value
+    })
   }
 
   return <div>
