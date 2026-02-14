@@ -4,6 +4,9 @@ import CreateProduct from "./pages/CreateProduct";
 import UpdateProductPage from "./pages/UpdateProductPage";
 import Navbar from "./components/Navbar";
 
+//temporal
+import app from "./config/configFirebase";
+
 const App = () => {
   return (
     // Browser Router es un contexto que conecta los componente con la history de API de JS
