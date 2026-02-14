@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { requestProductById } from "../services/productosService";
+import { useParams, useNavigate } from "react-router-dom";
+import { requestProductById, updateProduct } from "../services/productosService";
 import Input from "../components/Input";
+import Swal from "sweetalert2";
 
 const UpdateProductPage = () => {
   const [producto, SetProducto] = useState({
@@ -13,6 +14,7 @@ const UpdateProductPage = () => {
   });
 
   const { id } = useParams();
+  const navigate = useNavigate();
   // console.log(id);
 
   const inputs = [
@@ -53,6 +55,18 @@ const UpdateProductPage = () => {
 
   const manejarSubmit = async (evento) => {
     evento.preventDefault();
+    try {
+      await updateProduct(id, producto);
+      await Swal.fire({
+        icon: "success",
+        title: "Producto actualizado",
+         text: `El producto ${producto.nombre} ha sido actualizado exitosamente`,
+         theme: "dark",
+       });
+      navigate("/"); //navega a la ruta raíz (Dashboard)
+    } catch (error) {
+
+    }
   };
 
   useEffect(() => {
