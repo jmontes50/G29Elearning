@@ -59,7 +59,8 @@ const UpdateProductPage = () => {
     const getProduct = async () => {
       try {
         const producto = await requestProductById(id);
-        console.log(producto);
+        // estamos actualizando el estado con el producto obtenido de la API
+        SetProducto(producto);
       } catch (error) {
         console.error("Error al obtener el producto:", error);
       }
