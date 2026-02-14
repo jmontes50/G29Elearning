@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productosService";
 import TableProducts from "../components/TableProducts";
 import { Pencil } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const DashboardPage = () => {
   const [products, setProducts] = useState([]);
@@ -10,9 +11,9 @@ const DashboardPage = () => {
     {
       name: "Editar Producto",
       component: (id) => (
-        <button className="btn btn-primary" onClick={() => console.log(id)}>
+        <Link className="btn btn-primary" to={`/actualizar-producto/${id}`}>
           <Pencil size={16} />
-        </button>
+        </Link>
       ),
     },
   ];
