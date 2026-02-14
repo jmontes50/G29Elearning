@@ -65,7 +65,13 @@ const UpdateProductPage = () => {
        });
       navigate("/"); //navega a la ruta raíz (Dashboard)
     } catch (error) {
-
+      console.error("Error al actualizar el producto:", error);
+       await Swal.fire({
+        icon: "error",
+        title: "Error",
+         text: `Hubo un error al actualizar el producto ${producto.nombre}`,
+         theme: "dark",
+       });
     }
   };
 
