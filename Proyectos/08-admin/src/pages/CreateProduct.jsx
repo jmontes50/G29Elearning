@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../components/Input";
 import { createProduct } from "../services/productosService";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CreateProduct = () => {
   const [producto, SetProducto] = useState({
@@ -11,6 +12,8 @@ const CreateProduct = () => {
     stock: 0,
     // imagen:""
   });
+  //hook para navegar programáticamente a otras rutas
+  const navigate = useNavigate();
 
   const inputs = [
     {
@@ -52,11 +55,14 @@ const CreateProduct = () => {
     evento.preventDefault(); //evita que se recargue la página
     try {
       const nuevoProducto = await createProduct(producto);
-      Swal.fire({
+      //esperamos a la interacción del usuario con el alert antes de navegar
+      await Swal.fire({
         icon: "success",
         title: "Producto creado!!",
-        text: `El producto ${nuevoProducto.nombre} ha sido creado exitosamente`
+        text: `El producto ${nuevoProducto.nombre} ha sido creado exitosamente`,
+        theme: "dark",
       });
+      navigate("/"); //navega a la ruta raíz (Dashboard)
     } catch (error) {
       console.error("Error al crear el producto:", error);
     }
