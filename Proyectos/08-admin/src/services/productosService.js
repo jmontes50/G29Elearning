@@ -31,4 +31,29 @@ const createProduct = async (productData) => {
   }
 }
 
-export { requestProducts, createProduct };
+//función para obtener un producto por su ID
+const requestProductById = async (id) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/${id}`);
+    if(response.status === 200) {
+      return response.data;
+    }
+    throw new Error("Error al obtener el producto");
+  } catch (error) {
+    throw error;
+  }
+}
+
+const updateProduct = async (id, updatedData) => {
+  try {
+    const response = await axios.put(`${BASE_URL}/${id}`, updatedData);
+    if(response.status === 200) {
+      return response.data;
+    }
+    throw new Error("Error al actualizar el producto");
+  } catch (error) {
+    throw error;
+  }
+}
+
+export { requestProducts, createProduct, requestProductById, updateProduct };
