@@ -5,6 +5,7 @@ import { create } from 'zustand';
 //y esa función tiene que retornar un objeto
 const useContadorStore = create((set) => {
   return {
+    //tenemos total flexibilidad para definir que almacenamos
     contador: 0, //definimos que queremos guardar en este store
     //podemos definir que acciones queremos ejecutar,
     subirAMil: () => set({ contador: 1000 }),
