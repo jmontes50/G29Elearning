@@ -16,16 +16,21 @@ const DashboardPage = () => {
         icon: "warning",
         showCancelButton: true,
         cancelButtonText: "No, Cancelar",
-        confirmButtonText: "Si, Eliminar"
+        confirmButtonText: "Si, Eliminar",
+        theme:"dark"
       })
       // console.log(result)
       if(result.isConfirmed) {
         await deleteProduct(id);
         await Swal.fire({
           title: "Producto Eliminado",
-          icon: "success"
+          icon: "success",
+          theme:"dark"
         })
       }
+      //filtrando el producto eliminado
+      const afterDeleteProducts = products.filter((prod) => prod.id !== id);
+      setProducts(afterDeleteProducts);
     } catch (error) {
       console.log(error)
     }
@@ -66,7 +71,7 @@ const DashboardPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
       <TableProducts products={products} actions={actions} />
     </div>
