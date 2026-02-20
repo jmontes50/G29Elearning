@@ -2,10 +2,10 @@ import useContadorStore from './store';
 
 const App = () => {
 
-  // console.log(useContadorStore());
+  console.log(useContadorStore());
   //useContadorStore es una función, y al ejecutarla nos devuelve el estado del store (un objeto)
   //al ser un objeto lo podemos desestructurar para obtener lo que queremos
-  const { contador, subirAMil, incrementar } = useContadorStore();
+  const { contador, subirAMil, incrementar, frutas } = useContadorStore();
 
   return (
     <div>
