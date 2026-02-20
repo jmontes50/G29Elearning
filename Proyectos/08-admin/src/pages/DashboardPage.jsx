@@ -1,11 +1,35 @@
 import { useState, useEffect } from "react";
-import { requestProducts } from "../services/productosService";
+import { requestProducts, deleteProduct } from "../services/productosService";
 import TableProducts from "../components/TableProducts";
 import { Pencil, Trash } from "lucide-react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DashboardPage = () => {
   const [products, setProducts] = useState([]);
+
+  const handleDelete = async (id) => {
+    try {
+      const result = await Swal.fire({
+        title:"Estás seguro?",
+        text: "Esta acción es irreversible",
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonText: "No, Cancelar",
+        confirmButtonText: "Si, Eliminar"
+      })
+      // console.log(result)
+      if(result.isConfirmed) {
+        await deleteProduct(id);
+        await Swal.fire({
+          title: "Producto Eliminado",
+          icon: "success"
+        })
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const actions = [
     {
@@ -19,7 +43,9 @@ const DashboardPage = () => {
     {
       name: "Eliminar Producto",
       component: (id) => (
-        <button className="btn btn-warning ml-2" onClick={() => alert(`Eliminar producto con ID: ${id}`)}>
+        <button className="btn btn-warning ml-2" onClick={() => {
+          handleDelete(id)
+        }}>
           <Trash size={16} />
         </button>
       ),
