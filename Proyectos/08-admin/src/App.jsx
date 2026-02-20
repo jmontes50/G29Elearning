@@ -5,7 +5,7 @@ import UpdateProductPage from "./pages/UpdateProductPage";
 import Navbar from "./components/Navbar";
 
 //temporal
-import app from "./config/configFirebase";
+// import app from "./config/configFirebase";
 
 const App = () => {
   return (
