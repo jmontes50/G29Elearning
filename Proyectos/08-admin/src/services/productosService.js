@@ -56,4 +56,16 @@ const updateProduct = async (id, updatedData) => {
   }
 }
 
-export { requestProducts, createProduct, requestProductById, updateProduct };
+const deleteProduct = async (id) => {
+  try {
+    const response = await axios.delete(`${BASE_URL}/${id}`);
+    if(response.status === 200) {
+      return response.data;
+    }
+    throw new Error("Error al eliminar el producto");
+  } catch (error) {
+    throw error;
+  }
+}
+
+export { requestProducts, createProduct, requestProductById, updateProduct, deleteProduct };
