@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productosService";
 import TableProducts from "../components/TableProducts";
-import { Pencil } from "lucide-react";
+import { Pencil, Trash } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DashboardPage = () => {
@@ -16,6 +16,14 @@ const DashboardPage = () => {
         </Link>
       ),
     },
+    {
+      name: "Eliminar Producto",
+      component: (id) => (
+        <button className="btn btn-warning ml-2" onClick={() => alert(`Eliminar producto con ID: ${id}`)}>
+          <Trash size={16} />
+        </button>
+      ),
+    }
   ];
 
   useEffect(() => {
